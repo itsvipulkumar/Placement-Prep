@@ -13,10 +13,10 @@ int binarySearch(vector<int> &arr, int s, int e, int key)
     }
     else if (key > arr[mid])
     {
-        return binarySearch(arr, mid + 1, e, key);
+         binarySearch(arr, mid + 1, e, key);
     }
     else
-        return binarySearch(arr, s, mid - 1, key);
+         binarySearch(arr, s, mid - 1, key);
 }
 int linearSearch(vector<int> &arr, int i, int key)
 {
@@ -30,9 +30,7 @@ int linearSearch(vector<int> &arr, int i, int key)
     linearSearch(arr, i + 1, key);
 }
 int getSum(vector<int> &arr, int i, int sum)
-
 {
-
     if (i == arr.size())
     {
         return sum;
@@ -43,7 +41,6 @@ int getSum(vector<int> &arr, int i, int sum)
 }
 bool isSorted(vector<int> &arr, int size)
 {
-
     if (size == arr.size() - 1)
     {
         return true;
@@ -64,5 +61,5 @@ int main()
     // cout << "Sum is : " << getSum(arr, 0,0) << endl;
 
     //    cout<< linearSearch(arr,0,4)<<endl;
-    cout << binarySearch(arr, 0, n - 1, 4) << endl;
+    cout << binarySearch(arr, 0, n - 1, 1) << endl;
 }
